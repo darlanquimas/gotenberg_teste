@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>70 Pages Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* Estilo para quebra de página na impressão */
+    @media print {
+      table {
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>70 Pages Table</h1>
+  <!-- Tabela com 70 páginas -->
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Geração de 3500 linhas -->
+      <!-- 70 páginas com 50 linhas por página -->
+      <script>
+        const tbody = document.querySelector('tbody');
+        for (let i = 1; i <= 3500; i++) {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${i}</td>
+            <td>John Doe ${i}</td>
+            <td>${20 + (i % 50)}</td>
+            <td>City ${i % 100}</td>
+          `;
+          tbody.appendChild(row);
+        }
+      </script>
+    </tbody>
+  </table>
+</body>
+</html>
