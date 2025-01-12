@@ -131,7 +131,3 @@ Se você ainda não tem o Docker Desktop instalado, siga as instruções [aqui](
 
 - **Erro ao acessar o Gotenberg**: Verifique se o Gotenberg está sendo executado corretamente em `localhost:3000`. Caso contrário, consulte os logs do Docker para diagnosticar o problema.
 
----
-
-Se você tiver mais dúvidas ou sugestões de melhoria, fique à vontade para abrir uma **issue** ou contribuir com um **pull request**!
-
